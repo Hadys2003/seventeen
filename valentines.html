@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+    body {
+        font-family: 'Cursive', sans-serif;
+        text-align: center;
+        background: linear-gradient(to right, #ff99cc, #ffcccc); /* Soft pink to lavender gradient */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    h1 {
+        color: #cc0066; /* Darker pink */
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #4d004d; /* Deep purple */
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    img {
+        max-width: 80%;
+        height: auto;
+        border-radius: 15px; /* Softer border radius */
+        margin-top: 20px;
+        border: 5px solid #cc0066;
+    }
+
+    .heart {
+        color: #cc0066;
+        font-size: 2em;
+        animation: beat 1s infinite alternate;
+    }
+
+    @keyframes beat {
+        to {
+            transform: scale(1.2);
+        }
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery-item {
+        margin: 10px;
+    }
+
+    #anniversary {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Valentine's Page -->
+<section id="valentines">
+    <h1>Happy Valentine's Day!</h1>
+    <p>Wishing you a day filled with love and joy my love.</p>
+    <div class="heart">❤️</div>
+    <img src="valentines.jpg" width="300">
+</section>
+
+<!-- Anniversary Page -->
+<section id="anniversary" style="display:none;">
+    <h1>17/02/2024</h1>
+    <p>
+		Hey love,
+		Happy 4th anniversary! Today marks another beautiful year of love and happiness.
+		Just want to say thanks for all the love and good times.
+		I know I'm not the best at expressing my feelings, but you've always understood me.
+		You're not just my best friend; you're my everything.
+		Words may fail me, but you know you're worth more than I can say.
+		I love you so much Rasha. Four years... Time has flown, and we're still counting.❤️<br>
+		~Hady Saleh
+    </p>
+</section>
+
+<script>
+    // Switch between pages
+    const valentinesPage = document.getElementById('valentines');
+    const anniversaryPage = document.getElementById('anniversary');
+    const usPage = document.getElementById('us');
+
+    function showValentinesPage() {
+        valentinesPage.style.display = 'block';
+        anniversaryPage.style.display = 'none';
+        usPage.style.display = 'none';
+    }
+
+    function showAnniversaryPage() {
+        valentinesPage.style.display = 'none';
+        anniversaryPage.style.display = 'block';
+        usPage.style.display = 'none';
+    }
+
+</script>
+
+<!-- Navigation Buttons -->
+<div>
+    <button onclick="showValentinesPage()">Valentine's</button>
+    <button onclick="showAnniversaryPage()">Anniversary</button>
+</div>
+
+</body>
+</html>
